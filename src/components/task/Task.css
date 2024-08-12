@@ -1,0 +1,61 @@
+.task{
+    width:70%;
+    min-height:50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    border-left: 5px solid #F8C794;
+    border-top: 5px solid #f8eddc;
+    border-bottom: 5px solid #F8C794;
+    border-right: 5px solid #f8eddc ;
+}
+
+.tasktext{
+    width: 80%;
+}
+
+.del{
+    background-color: transparent;
+    border: none;
+}
+
+.del:hover{
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none; /* For Safari */
+    -moz-appearance: none;    /* For Firefox */
+    width: 20px;
+    height: 20px;
+    border: 2px solid #F8C794;
+    background-color: transparent;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #F8C794;
+    border-color: #F8C794;
+    border-radius: 3px;
+}
+
+input[type="checkbox"]::after {
+    content: '';
+    position: absolute;
+    top: 0.5px;
+    left: 3.5px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    display: none;
+}
+
+input[type="checkbox"]:checked::after {
+    display: block;
+}
